@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: Xeroizer::Record::XmlHelper::ClassMethods
+  
+    &mdash; Documentation by YARD 0.7.5
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../../..';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../../_index.html">Index (C)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../../../Xeroizer.html" title="Xeroizer (module)">Xeroizer</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Record.html" title="Xeroizer::Record (module)">Record</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../XmlHelper.html" title="Xeroizer::Record::XmlHelper (module)">XmlHelper</a></span></span>
+     &raquo; 
+    <span class="title">ClassMethods</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: Xeroizer::Record::XmlHelper::ClassMethods
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/xeroizer/record/xml_helper.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_from_node-instance_method" title="#build_from_node (instance method)">- (Object) <strong>build_from_node</strong>(node, parent) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Build a record instance from the XML node.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="build_from_node-instance_method">
+  
+    - (<tt>Object</tt>) <strong>build_from_node</strong>(node, parent) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Build a record instance from the XML node.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/xml_helper.rb', line 15</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_build_from_node identifier id'>build_from_node</span><span class='lparen token'>(</span><span class='rubyid_node identifier id'>node</span><span class='comma token'>,</span> <span class='rubyid_parent identifier id'>parent</span><span class='rparen token'>)</span>
+  <span class='rubyid_record identifier id'>record</span> <span class='assign token'>=</span> <span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_parent identifier id'>parent</span><span class='rparen token'>)</span>
+  <span class='rubyid_node identifier id'>node</span><span class='dot token'>.</span><span class='rubyid_elements identifier id'>elements</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span> <span class='rubyid_element identifier id'>element</span> <span class='bitor op'>|</span>
+    <span class='rubyid_field identifier id'>field</span> <span class='assign token'>=</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_fields identifier id'>fields</span><span class='lbrack token'>[</span><span class='rubyid_element identifier id'>element</span><span class='dot token'>.</span><span class='rubyid_name identifier id'>name</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='rubyid_underscore identifier id'>underscore</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span><span class='rbrack token'>]</span>
+    <span class='rubyid_if if kw'>if</span> <span class='rubyid_field identifier id'>field</span>
+      <span class='rubyid_value identifier id'>value</span> <span class='assign token'>=</span> <span class='rubyid_case case kw'>case</span> <span class='rubyid_field identifier id'>field</span><span class='lbrack token'>[</span><span class='symbol val'>:type</span><span class='rbrack token'>]</span>
+        <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:guid</span>        <span class='rubyid_then then kw'>then</span> <span class='rubyid_element identifier id'>element</span><span class='dot token'>.</span><span class='rubyid_text identifier id'>text</span>
+        <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:string</span>      <span class='rubyid_then then kw'>then</span> <span class='rubyid_element identifier id'>element</span><span class='dot token'>.</span><span class='rubyid_text identifier id'>text</span>
+        <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:boolean</span>     <span class='rubyid_then then kw'>then</span> <span class='lparen token'>(</span><span class='rubyid_element identifier id'>element</span><span class='dot token'>.</span><span class='rubyid_text identifier id'>text</span> <span class='eq op'>==</span> <span class='string val'>'true'</span><span class='rparen token'>)</span>
+        <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:integer</span>     <span class='rubyid_then then kw'>then</span> <span class='rubyid_element identifier id'>element</span><span class='dot token'>.</span><span class='rubyid_text identifier id'>text</span><span class='dot token'>.</span><span class='rubyid_to_i identifier id'>to_i</span>
+        <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:decimal</span>     <span class='rubyid_then then kw'>then</span> <span class='rubyid_BigDecimal constant id'>BigDecimal</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_element identifier id'>element</span><span class='dot token'>.</span><span class='rubyid_text identifier id'>text</span><span class='rparen token'>)</span>
+        <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:date</span>        <span class='rubyid_then then kw'>then</span> <span class='rubyid_Date constant id'>Date</span><span class='dot token'>.</span><span class='rubyid_parse identifier id'>parse</span><span class='lparen token'>(</span><span class='rubyid_element identifier id'>element</span><span class='dot token'>.</span><span class='rubyid_text identifier id'>text</span><span class='rparen token'>)</span>
+        <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:datetime</span>    <span class='rubyid_then then kw'>then</span> <span class='rubyid_Time constant id'>Time</span><span class='dot token'>.</span><span class='rubyid_parse identifier id'>parse</span><span class='lparen token'>(</span><span class='rubyid_element identifier id'>element</span><span class='dot token'>.</span><span class='rubyid_text identifier id'>text</span><span class='rparen token'>)</span>
+        <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:datetime_utc</span> <span class='rubyid_then then kw'>then</span> <span class='rubyid_ActiveSupport constant id'>ActiveSupport</span><span class='colon2 op'>::</span><span class='rubyid_TimeZone constant id'>TimeZone</span><span class='lbrack token'>[</span><span class='string val'>'UTC'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_parse identifier id'>parse</span><span class='lparen token'>(</span><span class='rubyid_element identifier id'>element</span><span class='dot token'>.</span><span class='rubyid_text identifier id'>text</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_utc identifier id'>utc</span><span class='dot token'>.</span><span class='rubyid_round identifier id'>round</span><span class='lparen token'>(</span><span class='integer val'>3</span><span class='rparen token'>)</span>
+        <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:belongs_to</span>  
+          <span class='rubyid_model_name identifier id'>model_name</span> <span class='assign token'>=</span> <span class='rubyid_field identifier id'>field</span><span class='lbrack token'>[</span><span class='symbol val'>:model_name</span><span class='rbrack token'>]</span> <span class='question op'>?</span> <span class='rubyid_field identifier id'>field</span><span class='lbrack token'>[</span><span class='symbol val'>:model_name</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span> <span class='colon op'>:</span> <span class='rubyid_element identifier id'>element</span><span class='dot token'>.</span><span class='rubyid_name identifier id'>name</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span>
+          <span class='rubyid_Xeroizer constant id'>Xeroizer</span><span class='colon2 op'>::</span><span class='rubyid_Record constant id'>Record</span><span class='dot token'>.</span><span class='rubyid_const_get identifier id'>const_get</span><span class='lparen token'>(</span><span class='rubyid_model_name identifier id'>model_name</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_build_from_node identifier id'>build_from_node</span><span class='lparen token'>(</span><span class='rubyid_element identifier id'>element</span><span class='comma token'>,</span> <span class='rubyid_parent identifier id'>parent</span><span class='rparen token'>)</span>
+          
+        <span class='rubyid_when when kw'>when</span> <span class='symbol val'>:has_many</span>
+          <span class='rubyid_if if kw'>if</span> <span class='rubyid_element identifier id'>element</span><span class='dot token'>.</span><span class='rubyid_element_children identifier id'>element_children</span><span class='dot token'>.</span><span class='rubyid_size identifier id'>size</span> <span class='gt op'>&gt;</span> <span class='integer val'>0</span>
+            <span class='rubyid_sub_field_name identifier id'>sub_field_name</span> <span class='assign token'>=</span> <span class='rubyid_field identifier id'>field</span><span class='lbrack token'>[</span><span class='symbol val'>:model_name</span><span class='rbrack token'>]</span> <span class='question op'>?</span> <span class='rubyid_field identifier id'>field</span><span class='lbrack token'>[</span><span class='symbol val'>:model_name</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span> <span class='colon op'>:</span> <span class='rubyid_element identifier id'>element</span><span class='dot token'>.</span><span class='rubyid_children identifier id'>children</span><span class='dot token'>.</span><span class='rubyid_first identifier id'>first</span><span class='dot token'>.</span><span class='rubyid_name identifier id'>name</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span>
+            <span class='rubyid_sub_parent identifier id'>sub_parent</span> <span class='assign token'>=</span> <span class='rubyid_record identifier id'>record</span><span class='dot token'>.</span><span class='rubyid_new_model_class identifier id'>new_model_class</span><span class='lparen token'>(</span><span class='rubyid_sub_field_name identifier id'>sub_field_name</span><span class='rparen token'>)</span>
+            <span class='rubyid_element identifier id'>element</span><span class='dot token'>.</span><span class='rubyid_children identifier id'>children</span><span class='dot token'>.</span><span class='rubyid_inject identifier id'>inject</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span> <span class='rubyid_list identifier id'>list</span><span class='comma token'>,</span> <span class='rubyid_element identifier id'>element</span> <span class='bitor op'>|</span>
+              <span class='rubyid_list identifier id'>list</span> <span class='lshft op'>&lt;&lt;</span> <span class='rubyid_Xeroizer constant id'>Xeroizer</span><span class='colon2 op'>::</span><span class='rubyid_Record constant id'>Record</span><span class='dot token'>.</span><span class='rubyid_const_get identifier id'>const_get</span><span class='lparen token'>(</span><span class='rubyid_sub_field_name identifier id'>sub_field_name</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_build_from_node identifier id'>build_from_node</span><span class='lparen token'>(</span><span class='rubyid_element identifier id'>element</span><span class='comma token'>,</span> <span class='rubyid_sub_parent identifier id'>sub_parent</span><span class='rparen token'>)</span>
+            <span class='rubyid_end end kw'>end</span>
+          <span class='rubyid_end end kw'>end</span>
+
+      <span class='rubyid_end end kw'>end</span>
+      <span class='rubyid_if if kw'>if</span> <span class='rubyid_field identifier id'>field</span><span class='lbrack token'>[</span><span class='symbol val'>:calculated</span><span class='rbrack token'>]</span>
+        <span class='rubyid_record identifier id'>record</span><span class='dot token'>.</span><span class='rubyid_attributes identifier id'>attributes</span><span class='lbrack token'>[</span><span class='rubyid_field identifier id'>field</span><span class='lbrack token'>[</span><span class='symbol val'>:internal_name</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='rubyid_value identifier id'>value</span>
+      <span class='rubyid_else else kw'>else</span>
+        <span class='rubyid_record identifier id'>record</span><span class='dot token'>.</span><span class='rubyid_send identifier id'>send</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{field[:internal_name]}=&quot;</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span><span class='comma token'>,</span> <span class='rubyid_value identifier id'>value</span><span class='rparen token'>)</span>
+      <span class='rubyid_end end kw'>end</span>
+    <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_end end kw'>end</span>
+
+  <span class='rubyid_parent identifier id'>parent</span><span class='dot token'>.</span><span class='rubyid_mark_clean identifier id'>mark_clean</span><span class='lparen token'>(</span><span class='rubyid_record identifier id'>record</span><span class='rparen token'>)</span>
+  <span class='rubyid_record identifier id'>record</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Wed Apr 10 10:05:38 2013 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.5 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

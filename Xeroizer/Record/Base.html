@@ -1,0 +1,1340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Xeroizer::Record::Base
+  
+    &mdash; Documentation by YARD 0.7.5
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '../..';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (B)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../../Xeroizer.html" title="Xeroizer (module)">Xeroizer</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Record.html" title="Xeroizer::Record (module)">Record</a></span></span>
+     &raquo; 
+    <span class="title">Base</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Xeroizer::Record::Base
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Xeroizer::Record::Base</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="../../ClassLevelInheritableAttributes.html" title="ClassLevelInheritableAttributes (module)">ClassLevelInheritableAttributes</a></span>, <span class='object_link'><a href="ModelDefinitionHelper.html" title="Xeroizer::Record::ModelDefinitionHelper (module)">ModelDefinitionHelper</a></span>, <span class='object_link'><a href="RecordAssociationHelper.html" title="Xeroizer::Record::RecordAssociationHelper (module)">RecordAssociationHelper</a></span>, <span class='object_link'><a href="ValidationHelper.html" title="Xeroizer::Record::ValidationHelper (module)">ValidationHelper</a></span>, <span class='object_link'><a href="XmlHelper.html" title="Xeroizer::Record::XmlHelper (module)">XmlHelper</a></span></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/xeroizer/record/base.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="Account.html" title="Xeroizer::Record::Account (class)">Account</a></span>, <span class='object_link'><a href="Address.html" title="Xeroizer::Record::Address (class)">Address</a></span>, <span class='object_link'><a href="BankAccount.html" title="Xeroizer::Record::BankAccount (class)">BankAccount</a></span>, <span class='object_link'><a href="BankTransaction.html" title="Xeroizer::Record::BankTransaction (class)">BankTransaction</a></span>, <span class='object_link'><a href="BrandingTheme.html" title="Xeroizer::Record::BrandingTheme (class)">BrandingTheme</a></span>, <span class='object_link'><a href="Contact.html" title="Xeroizer::Record::Contact (class)">Contact</a></span>, <span class='object_link'><a href="ContactGroup.html" title="Xeroizer::Record::ContactGroup (class)">ContactGroup</a></span>, <span class='object_link'><a href="CreditNote.html" title="Xeroizer::Record::CreditNote (class)">CreditNote</a></span>, <span class='object_link'><a href="Currency.html" title="Xeroizer::Record::Currency (class)">Currency</a></span>, <span class='object_link'><a href="Employee.html" title="Xeroizer::Record::Employee (class)">Employee</a></span>, <span class='object_link'><a href="ExternalLink.html" title="Xeroizer::Record::ExternalLink (class)">ExternalLink</a></span>, <span class='object_link'><a href="Invoice.html" title="Xeroizer::Record::Invoice (class)">Invoice</a></span>, <span class='object_link'><a href="Item.html" title="Xeroizer::Record::Item (class)">Item</a></span>, <span class='object_link'><a href="ItemPurchaseDetails.html" title="Xeroizer::Record::ItemPurchaseDetails (class)">ItemPurchaseDetails</a></span>, <span class='object_link'><a href="ItemSalesDetails.html" title="Xeroizer::Record::ItemSalesDetails (class)">ItemSalesDetails</a></span>, <span class='object_link'><a href="Journal.html" title="Xeroizer::Record::Journal (class)">Journal</a></span>, <span class='object_link'><a href="JournalLine.html" title="Xeroizer::Record::JournalLine (class)">JournalLine</a></span>, <span class='object_link'><a href="JournalLineTrackingCategory.html" title="Xeroizer::Record::JournalLineTrackingCategory (class)">JournalLineTrackingCategory</a></span>, <span class='object_link'><a href="LineItem.html" title="Xeroizer::Record::LineItem (class)">LineItem</a></span>, <span class='object_link'><a href="ManualJournal.html" title="Xeroizer::Record::ManualJournal (class)">ManualJournal</a></span>, <span class='object_link'><a href="ManualJournalLine.html" title="Xeroizer::Record::ManualJournalLine (class)">ManualJournalLine</a></span>, <span class='object_link'><a href="Option.html" title="Xeroizer::Record::Option (class)">Option</a></span>, <span class='object_link'><a href="Organisation.html" title="Xeroizer::Record::Organisation (class)">Organisation</a></span>, <span class='object_link'><a href="Payment.html" title="Xeroizer::Record::Payment (class)">Payment</a></span>, <span class='object_link'><a href="Phone.html" title="Xeroizer::Record::Phone (class)">Phone</a></span>, <span class='object_link'><a href="TaxRate.html" title="Xeroizer::Record::TaxRate (class)">TaxRate</a></span>, <span class='object_link'><a href="TrackingCategory.html" title="Xeroizer::Record::TrackingCategory (class)">TrackingCategory</a></span>, <span class='object_link'><a href="TrackingCategoryChild.html" title="Xeroizer::Record::TrackingCategoryChild (class)">TrackingCategoryChild</a></span></p>
+</div>
+
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#attributes-instance_method" title="#attributes (instance method)">- (Object) <strong>attributes</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute attributes.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#complete_record_downloaded-instance_method" title="#complete_record_downloaded (instance method)">- (Object) <strong>complete_record_downloaded</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute complete_record_downloaded.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#errors-instance_method" title="#errors (instance method)">- (Object) <strong>errors</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute errors.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parent-instance_method" title="#parent (instance method)">- (Object) <strong>parent</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute parent.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build-class_method" title="build (class method)">+ (Object) <strong>build</strong>(attributes, parent) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Build a record with attributes set to the value of attributes.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%5B%5D-instance_method" title="#[] (instance method)">- (Object) <strong>[]</strong>(attribute) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%5B%5D%3D-instance_method" title="#[]= (instance method)">- (Object) <strong>[]=</strong>(attribute, value) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#as_json-instance_method" title="#as_json (instance method)">- (Object) <strong>as_json</strong>(options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#complete_record_downloaded%3F-instance_method" title="#complete_record_downloaded? (instance method)">- (Boolean) <strong>complete_record_downloaded?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Check to see if the complete record is downloaded.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#download_complete_record%21-instance_method" title="#download_complete_record! (instance method)">- (Object) <strong>download_complete_record!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Downloads the complete record if we only have a summary of the record.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Base) <strong>initialize</strong>(parent) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Base.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inspect-instance_method" title="#inspect (instance method)">- (Object) <strong>inspect</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_model_class-instance_method" title="#new_model_class (instance method)">- (Object) <strong>new_model_class</strong>(model_name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_record%3F-instance_method" title="#new_record? (instance method)">- (Boolean) <strong>new_record?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#save-instance_method" title="#save (instance method)">- (Object) <strong>save</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#saved%21-instance_method" title="#saved! (instance method)">- (Object) <strong>saved!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_h-instance_method" title="#to_h (instance method)">- (Object) <strong>to_h</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_attributes-instance_method" title="#update_attributes (instance method)">- (Object) <strong>update_attributes</strong>(attributes) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="XmlHelper.html" title="Xeroizer::Record::XmlHelper (module)">XmlHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="XmlHelper.html#included-class_method" title="Xeroizer::Record::XmlHelper.included (method)">included</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="ValidationHelper.html" title="Xeroizer::Record::ValidationHelper (module)">ValidationHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ValidationHelper.html#included-class_method" title="Xeroizer::Record::ValidationHelper.included (method)">included</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="RecordAssociationHelper.html" title="Xeroizer::Record::RecordAssociationHelper (module)">RecordAssociationHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="RecordAssociationHelper.html#included-class_method" title="Xeroizer::Record::RecordAssociationHelper.included (method)">included</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="ModelDefinitionHelper.html" title="Xeroizer::Record::ModelDefinitionHelper (module)">ModelDefinitionHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ModelDefinitionHelper.html#included-class_method" title="Xeroizer::Record::ModelDefinitionHelper.included (method)">included</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../../ClassLevelInheritableAttributes.html" title="ClassLevelInheritableAttributes (module)">ClassLevelInheritableAttributes</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../../ClassLevelInheritableAttributes.html#included-class_method" title="ClassLevelInheritableAttributes.included (method)">included</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Xeroizer::Record::Base (class)">Base</a></span></tt>) <strong>initialize</strong>(parent) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>A new instance of Base</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 40</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='rubyid_parent identifier id'>parent</span><span class='rparen token'>)</span>
+  <span class='rubyid_@parent ivar id'>@parent</span> <span class='assign token'>=</span> <span class='rubyid_parent identifier id'>parent</span>
+  <span class='rubyid_@attributes ivar id'>@attributes</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id="attributes=-instance_method"></span>
+      <span id="attributes-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="attributes-instance_method">
+  
+    - (<tt>Object</tt>) <strong>attributes</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute attributes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 15</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_attributes identifier id'>attributes</span>
+  <span class='rubyid_@attributes ivar id'>@attributes</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="complete_record_downloaded=-instance_method"></span>
+      <span id="complete_record_downloaded-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="complete_record_downloaded-instance_method">
+  
+    - (<tt>Object</tt>) <strong>complete_record_downloaded</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute complete_record_downloaded</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 18</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_complete_record_downloaded identifier id'>complete_record_downloaded</span>
+  <span class='rubyid_@complete_record_downloaded ivar id'>@complete_record_downloaded</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id="errors=-instance_method"></span>
+      <span id="errors-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="errors-instance_method">
+  
+    - (<tt>Object</tt>) <strong>errors</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute errors</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 17</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_errors identifier id'>errors</span>
+  <span class='rubyid_@errors ivar id'>@errors</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="parent-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="parent-instance_method">
+  
+    - (<tt>Object</tt>) <strong>parent</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute parent</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 16</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_parent identifier id'>parent</span>
+  <span class='rubyid_@parent ivar id'>@parent</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="build-class_method">
+  
+    + (<tt>Object</tt>) <strong>build</strong>(attributes, parent) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Build a record with attributes set to the value of attributes.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31
+32
+33
+34</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 28</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_build identifier id'>build</span><span class='lparen token'>(</span><span class='rubyid_attributes identifier id'>attributes</span><span class='comma token'>,</span> <span class='rubyid_parent identifier id'>parent</span><span class='rparen token'>)</span>
+  <span class='rubyid_record identifier id'>record</span> <span class='assign token'>=</span> <span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_parent identifier id'>parent</span><span class='rparen token'>)</span>
+  <span class='rubyid_attributes identifier id'>attributes</span><span class='dot token'>.</span><span class='rubyid_each identifier id'>each</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span> <span class='rubyid_key identifier id'>key</span><span class='comma token'>,</span> <span class='rubyid_value identifier id'>value</span> <span class='bitor op'>|</span>
+    <span class='rubyid_record identifier id'>record</span><span class='dot token'>.</span><span class='rubyid_send identifier id'>send</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{key}=&quot;</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span><span class='comma token'>,</span> <span class='rubyid_value identifier id'>value</span><span class='rparen token'>)</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_record identifier id'>record</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="[]-instance_method">
+  
+    - (<tt>Object</tt>) <strong>[]</strong>(attribute) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 49</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='aref op'>[]</span><span class='lparen token'>(</span><span class='rubyid_attribute identifier id'>attribute</span><span class='rparen token'>)</span>
+  <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_send identifier id'>send</span><span class='lparen token'>(</span><span class='rubyid_attribute identifier id'>attribute</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="[]=-instance_method">
+  
+    - (<tt>Object</tt>) <strong>[]=</strong>(attribute, value) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 53</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='aset op'>[]=</span><span class='lparen token'>(</span><span class='rubyid_attribute identifier id'>attribute</span><span class='comma token'>,</span> <span class='rubyid_value identifier id'>value</span><span class='rparen token'>)</span>
+  <span class='rubyid_parent identifier id'>parent</span><span class='dot token'>.</span><span class='rubyid_mark_dirty identifier id'>mark_dirty</span><span class='lparen token'>(</span><span class='rubyid_self self kw'>self</span><span class='rparen token'>)</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_parent identifier id'>parent</span>
+  <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_send identifier id'>send</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{attribute}=&quot;</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span><span class='comma token'>,</span> <span class='rubyid_value identifier id'>value</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="as_json-instance_method">
+  
+    - (<tt>Object</tt>) <strong>as_json</strong>(options = {}) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 109</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_as_json identifier id'>as_json</span><span class='lparen token'>(</span><span class='rubyid_options identifier id'>options</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='rubyid_to_h identifier id'>to_h</span><span class='dot token'>.</span><span class='rubyid_to_json identifier id'>to_json</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="complete_record_downloaded?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>complete_record_downloaded?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Check to see if the complete record is downloaded.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78
+79
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 76</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_complete_record_downloaded? fid id'>complete_record_downloaded?</span>
+  <span class='rubyid_if if kw'>if</span> <span class='notop op'>!</span><span class='notop op'>!</span><span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_class identifier id'>class</span><span class='dot token'>.</span><span class='rubyid_list_contains_summary_only? fid id'>list_contains_summary_only?</span>
+    <span class='notop op'>!</span><span class='notop op'>!</span><span class='rubyid_complete_record_downloaded identifier id'>complete_record_downloaded</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_true true kw'>true</span>
+  <span class='rubyid_end end kw'>end</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="download_complete_record!-instance_method">
+  
+    - (<tt>Object</tt>) <strong>download_complete_record!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Downloads the complete record if we only have a summary of the record.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+85
+86
+87
+88
+89
+90
+91</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 85</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_download_complete_record! fid id'>download_complete_record!</span>
+  <span class='rubyid_record identifier id'>record</span> <span class='assign token'>=</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_parent identifier id'>parent</span><span class='dot token'>.</span><span class='rubyid_find identifier id'>find</span><span class='lparen token'>(</span><span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_id identifier id'>id</span><span class='rparen token'>)</span>
+  <span class='rubyid_@attributes ivar id'>@attributes</span> <span class='assign token'>=</span> <span class='rubyid_record identifier id'>record</span><span class='dot token'>.</span><span class='rubyid_attributes identifier id'>attributes</span> <span class='rubyid_if if_mod kw'>if</span> <span class='rubyid_record identifier id'>record</span>
+  <span class='rubyid_@complete_record_downloaded ivar id'>@complete_record_downloaded</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+  <span class='rubyid_parent identifier id'>parent</span><span class='dot token'>.</span><span class='rubyid_mark_clean identifier id'>mark_clean</span><span class='lparen token'>(</span><span class='rubyid_self self kw'>self</span><span class='rparen token'>)</span>
+  <span class='rubyid_self self kw'>self</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="inspect-instance_method">
+  
+    - (<tt>Object</tt>) <strong>inspect</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+120
+121
+122
+123
+124
+125</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 120</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_inspect identifier id'>inspect</span>
+  <span class='rubyid_attribute_string identifier id'>attribute_string</span> <span class='assign token'>=</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_attributes identifier id'>attributes</span><span class='dot token'>.</span><span class='rubyid_collect identifier id'>collect</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_attr identifier id'>attr</span><span class='comma token'>,</span> <span class='rubyid_value identifier id'>value</span><span class='bitor op'>|</span>
+    <span class='dstring node'>&quot;#{attr.inspect}: #{value.inspect}&quot;</span>
+  <span class='rubyid_end end kw'>end</span><span class='dot token'>.</span><span class='rubyid_join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot;, &quot;</span><span class='rparen token'>)</span>
+  <span class='dstring node'>&quot;#&lt;#{self.class} #{attribute_string}&gt;&quot;</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="new_model_class-instance_method">
+  
+    - (<tt>Object</tt>) <strong>new_model_class</strong>(model_name) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+45
+46
+47</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 45</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_new_model_class identifier id'>new_model_class</span><span class='lparen token'>(</span><span class='rubyid_model_name identifier id'>model_name</span><span class='rparen token'>)</span>
+  <span class='rubyid_Xeroizer constant id'>Xeroizer</span><span class='colon2 op'>::</span><span class='rubyid_Record constant id'>Record</span><span class='dot token'>.</span><span class='rubyid_const_get identifier id'>const_get</span><span class='lparen token'>(</span><span class='dstring node'>&quot;#{model_name}Model&quot;</span><span class='dot token'>.</span><span class='rubyid_to_sym identifier id'>to_sym</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='rubyid_new identifier id'>new</span><span class='lparen token'>(</span><span class='rubyid_parent identifier id'>parent</span><span class='dot token'>.</span><span class='rubyid_application identifier id'>application</span><span class='comma token'>,</span> <span class='rubyid_model_name identifier id'>model_name</span><span class='dot token'>.</span><span class='rubyid_to_s identifier id'>to_s</span><span class='rparen token'>)</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="new_record?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>new_record?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 71</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_new_record? fid id'>new_record?</span>
+  <span class='rubyid_id identifier id'>id</span><span class='dot token'>.</span><span class='rubyid_nil? fid id'>nil?</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="save-instance_method">
+  
+    - (<tt>Object</tt>) <strong>save</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+93
+94
+95
+96
+97
+98
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 93</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_save identifier id'>save</span>
+  <span class='rubyid_return return kw'>return</span> <span class='rubyid_false false kw'>false</span> <span class='rubyid_unless unless_mod kw'>unless</span> <span class='rubyid_valid? fid id'>valid?</span>
+  <span class='rubyid_if if kw'>if</span> <span class='rubyid_new_record? fid id'>new_record?</span>
+    <span class='rubyid_create identifier id'>create</span>
+  <span class='rubyid_else else kw'>else</span>
+    <span class='rubyid_update identifier id'>update</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_saved! fid id'>saved!</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="saved!-instance_method">
+  
+    - (<tt>Object</tt>) <strong>saved!</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+103
+104
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 103</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_saved! fid id'>saved!</span>
+  <span class='rubyid_@complete_record_downloaded ivar id'>@complete_record_downloaded</span> <span class='assign token'>=</span> <span class='rubyid_true true kw'>true</span>
+  <span class='rubyid_parent identifier id'>parent</span><span class='dot token'>.</span><span class='rubyid_mark_clean identifier id'>mark_clean</span><span class='lparen token'>(</span><span class='rubyid_self self kw'>self</span><span class='rparen token'>)</span>
+  <span class='rubyid_true true kw'>true</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="to_h-instance_method">
+  
+    - (<tt>Object</tt>) <strong>to_h</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+113
+114
+115
+116
+117
+118</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 113</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_to_h identifier id'>to_h</span>
+  <span class='rubyid_attrs identifier id'>attrs</span> <span class='assign token'>=</span> <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_attributes identifier id'>attributes</span><span class='dot token'>.</span><span class='rubyid_reject identifier id'>reject</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_k identifier id'>k</span><span class='comma token'>,</span> <span class='rubyid_v identifier id'>v</span><span class='bitor op'>|</span> <span class='rubyid_k identifier id'>k</span> <span class='eq op'>==</span> <span class='symbol val'>:parent</span> <span class='rbrace token'>}</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span> <span class='rubyid_do do kw'>do</span> <span class='bitor op'>|</span><span class='rubyid_k identifier id'>k</span><span class='comma token'>,</span> <span class='rubyid_v identifier id'>v</span><span class='bitor op'>|</span>
+    <span class='lbrack token'>[</span><span class='rubyid_k identifier id'>k</span><span class='comma token'>,</span> <span class='rubyid_v identifier id'>v</span><span class='dot token'>.</span><span class='rubyid_kind_of? fid id'>kind_of?</span><span class='lparen token'>(</span><span class='rubyid_Array constant id'>Array</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='rubyid_v identifier id'>v</span><span class='dot token'>.</span><span class='rubyid_map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:to_h</span><span class='rparen token'>)</span> <span class='colon op'>:</span> <span class='lparen token'>(</span><span class='rubyid_v identifier id'>v</span><span class='dot token'>.</span><span class='rubyid_respond_to? fid id'>respond_to?</span><span class='lparen token'>(</span><span class='symbol val'>:to_h</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='rubyid_v identifier id'>v</span><span class='dot token'>.</span><span class='rubyid_to_h identifier id'>to_h</span> <span class='colon op'>:</span> <span class='rubyid_v identifier id'>v</span><span class='rparen token'>)</span><span class='rbrack token'>]</span>
+  <span class='rubyid_end end kw'>end</span>
+  <span class='rubyid_Hash constant id'>Hash</span><span class='lbrack token'>[</span><span class='rubyid_attrs identifier id'>attrs</span><span class='rbrack token'>]</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="update_attributes-instance_method">
+  
+    - (<tt>Object</tt>) <strong>update_attributes</strong>(attributes) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/xeroizer/record/base.rb', line 66</span>
+
+<span class='rubyid_def def kw'>def</span> <span class='rubyid_update_attributes identifier id'>update_attributes</span><span class='lparen token'>(</span><span class='rubyid_attributes identifier id'>attributes</span><span class='rparen token'>)</span>
+  <span class='rubyid_self self kw'>self</span><span class='dot token'>.</span><span class='rubyid_attributes identifier id'>attributes</span> <span class='assign token'>=</span> <span class='rubyid_attributes identifier id'>attributes</span>
+  <span class='rubyid_save identifier id'>save</span>
+<span class='rubyid_end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Wed Apr 10 10:05:42 2013 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.5 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>
