@@ -2,7 +2,6 @@ module Xeroizer
   module Record
     
     class OptionModel < BaseModel
-            
     end
     
     class Option < Base
@@ -10,8 +9,13 @@ module Xeroizer
       set_primary_key :tracking_option_id
       
       guid   :tracking_option_id
+      guid   :tracking_category_id
       string :name
-      
+      	
+	    def overwrite_url
+        "trackingcategories/#{self.tracking_category_id}/options"
+      end
+
     end
     
   end
