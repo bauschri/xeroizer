@@ -39,6 +39,7 @@ module Xeroizer
     record :Option
     record :BankTransaction
     record :User
+    record :LinkedTransaction
 
     report :AgedPayablesByContact
     report :AgedReceivablesByContact
