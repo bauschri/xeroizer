@@ -75,6 +75,10 @@ require 'xeroizer/models/payroll/home_address'
 require 'xeroizer/models/payroll/bank_account'
 require 'xeroizer/models/payroll/employee'
 
+require 'xeroizer/models/payroll/home_address'
+require 'xeroizer/models/payroll/bank_account'
+require 'xeroizer/models/payroll/employee'
+
 require 'xeroizer/report/factory'
 
 require 'xeroizer/response'
