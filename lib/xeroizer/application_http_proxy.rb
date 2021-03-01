@@ -17,7 +17,16 @@ module Xeroizer
       end
 
       def http_put(xml, extra_params = {})
-        application.http_put(application.client, url, xml, extra_params)
+# REMOVED
+#       application.http_put(application.client, url, xml, extra_params)
+# ADDED
+        if extra_params.has_key?('url')
+          request_url = @application.xero_url + '/' + extra_params.delete('url')
+        else
+          request_url = url
+        end
+        application.http_put(application.client, request_url, xml, extra_params)
+#
       end
 
       def http_post(xml, extra_params = {})

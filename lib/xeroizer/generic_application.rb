@@ -46,6 +46,9 @@ module Xeroizer
     record :TaxRate
     record :TrackingCategory
     record :TrackingCategoryChild
+# ADDED
+    record :Option
+#
     record :BankTransaction
     record :BankTransfer
     record :User
