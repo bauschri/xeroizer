@@ -8,6 +8,17 @@ module Xeroizer
       set_permissions :read, :write, :update
 
       include AttachmentModel::Extensions
+# ADDED
+      def pdf(id, filename = nil)
+        pdf_data = @application.http_get(@application.client, "#{url}/#{CGI.escape(id)}", :response => :pdf)
+        if filename
+          File.open(filename, "wb") { | fp | fp.write pdf_data }
+          nil
+        else
+          pdf_data
+        end
+      end
+#
     end
     
     class PurchaseOrder < Base
@@ -43,6 +54,12 @@ module Xeroizer
 
       has_many     :line_items
       belongs_to :contact, :model_name => 'Contact'      
+
+# ADDED
+      def pdf(filename = nil)
+        parent.pdf(id, filename)
+      end
+#
     end
     
   end
