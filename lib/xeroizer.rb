@@ -78,6 +78,9 @@ require 'xeroizer/models/user'
 require 'xeroizer/models/journal_line_tracking_category'
 require 'xeroizer/models/contact_sales_tracking_category'
 require 'xeroizer/models/contact_purchases_tracking_category'
+# ADDED
+require 'xeroizer/models/linked_transaction'
+#
 
 require 'xeroizer/models/payroll/bank_account'
 require 'xeroizer/models/payroll/benefit_line'
