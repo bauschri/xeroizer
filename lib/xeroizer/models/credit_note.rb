@@ -15,7 +15,11 @@ module Xeroizer
         def pdf(id, filename = nil)
           pdf_data = @application.http_get(@application.client, "#{url}/#{CGI.escape(id)}", :response => :pdf)
           if filename
-            File.open(filename, "w") { | fp | fp.write pdf_data }
+# REMOVED
+#            File.open(filename, "w") { | fp | fp.write pdf_data }
+# ADDED
+            File.open(filename, "wb") { | fp | fp.write pdf_data }
+#
             nil
           else
             pdf_data
